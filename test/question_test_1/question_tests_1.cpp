@@ -6,7 +6,11 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
+TEST_CASE("test gpa_to_letter_grade")
 {
-	REQUIRE(test_config() == true);
+	REQUIRE(gpa_to_letter_grade(0.99) == "F");
+	REQUIRE(gpa_to_letter_grade(1.99) == "D");
+	REQUIRE(gpa_to_letter_grade(2) == "C");
+	REQUIRE(gpa_to_letter_grade(3.49) == "B");
+	REQUIRE(gpa_to_letter_grade(3.5) == "A");
 }
