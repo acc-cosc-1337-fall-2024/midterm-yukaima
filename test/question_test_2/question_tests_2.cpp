@@ -6,7 +6,11 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
+TEST_CASE("test decimal_to_hex")
 {
-	REQUIRE(test_config() == true);
+	REQUIRE(decimal_to_hex(10) == "A");
+	REQUIRE(decimal_to_hex(170) == "AA");
+	REQUIRE(decimal_to_hex(255) == "FF");
+	
+	
 }
