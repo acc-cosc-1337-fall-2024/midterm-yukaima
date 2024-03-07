@@ -6,7 +6,10 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
+TEST_CASE("test binary_to_decimal")
 {
-	REQUIRE(test_config() == true);
+	REQUIRE(binary_to_decimal("00001010") == 10);
+	REQUIRE(binary_to_decimal("10101010") == 170);
+    REQUIRE(binary_to_decimal("11111111") == 255);
+
 }
